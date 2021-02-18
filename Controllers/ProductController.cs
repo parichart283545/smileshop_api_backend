@@ -22,15 +22,11 @@ namespace BackEnd_DotNetCoreAPI.Controllers
             return Ok(await _productservice.GetProductFilter(filter));
         }
 
-
-
         [HttpGet("getallproducts")]
         public async Task<IActionResult> GetAllProducts()
         {
             return Ok(await _productservice.GetProductAll());
         }
-
-
 
         [HttpGet("getproductById/{productId}")]
         public async Task<IActionResult> GetProductrById(int productId)
@@ -38,15 +34,11 @@ namespace BackEnd_DotNetCoreAPI.Controllers
             return Ok(await _productservice.GetProductById(productId));
         }
 
-
-
         [HttpPost("addproductr")]
         public async Task<IActionResult> AddProductr(AddProductDto newProduc)
         {
             return Ok(await _productservice.AddProduct(newProduc));
         }
-
-
 
         [HttpPut("editproductr")]
         public async Task<IActionResult> EditProductr(EditProductDto editProduct)
